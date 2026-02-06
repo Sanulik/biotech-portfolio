@@ -164,16 +164,19 @@
     <div class="ass-card">
         <p><strong>Assignment Description:</strong> This presentation explored the intersection of <strong>Bioinformatics</strong> (the Super-Brain) and <strong>Nanotechnology</strong> (Tiny Tech) to educate school children on how biotechnology solves global issues[cite: 162, 163].</p>
 
-        <h4 style="margin-top: 30px;">Presentation Handouts</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
-            <img src="1-1.png" alt="Handout Page 1" class="handout-img">
-            <img src="1-2.png" alt="Handout Page 2" class="handout-img">
-            <img src="1-3.png" alt="Handout Page 3" class="handout-img">
-        </div>
+       <button class="attachment-btn" onclick="toggleHandouts('handout1')">
+            View Presentation Handouts ↓
+        </button>
 
+        <div id="handout1" style="display: none; margin-top: 20px; text-align: center;">
+            <img src="assets/1-1.png" alt="Handout Page 1" style="width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+            <img src="assets/1-2.png" alt="Handout Page 2" style="width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+            <img src="assets/1-3.png" alt="Handout Page 3" style="width: 100%; margin-bottom: 20px; border: 1px solid #333;">
+        </div>
+      
         <h4 style="margin-top: 30px;">Session Evidence</h4>
         <div style="text-align: center;">
-            <img src="group.png" alt="Group Presentation" 
+            <img src="group.jpeg" alt="Group Presentation" 
                  style="width: 100%; max-width: 600px; border: 1px solid var(--accent-brown); border-radius: 8px; filter: sepia(20%);">
             <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 10px;">Figure 1: Group 03 during the Gold Biotechnology session.</p>
         </div>
