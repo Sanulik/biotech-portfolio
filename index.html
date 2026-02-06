@@ -3,152 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S.K. Samarasinghe | Biotech Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>S.K. Samarasinghe | Portfolio</title>
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --accent-gold: #c5a059; /* Gold Biotech Theme */
-            --accent-blue: #2c3e50; /* Professional Theme */
-            --sidebar-bg: #f8f9fa;
+            --bg-dark: #1a1614;       /* Deep Espresso */
+            --card-bg: #26211e;       /* Dark Walnut */
+            --accent-brown: #a68b7c;  /* Warm Sand */
+            --text-main: #eaddcf;     /* Cream */
+            --text-dim: #b5a499;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Helvetica Neue', sans-serif;
             margin: 0;
-            display: flex;
-            color: var(--text-color);
-            line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
-        /* Sidebar Navigation */
-        nav {
-            width: 250px;
-            height: 100vh;
-            background: var(--sidebar-bg);
+        /* Floating Nav Bar */
+        .floating-nav {
             position: fixed;
-            padding: 20px;
-            border-right: 1px solid #eee;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: auto;
+            background: rgba(38, 33, 30, 0.9);
+            border-radius: 30px;
+            overflow: hidden;
+            transition: width 0.3s ease;
+            z-index: 1000;
+            border: 1px solid var(--accent-brown);
         }
 
-        .profile-img {
-            width: 120px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 20px;
+        .floating-nav:hover { width: 200px; }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            text-decoration: none;
+            color: var(--text-main);
+            white-space: nowrap;
         }
 
-        nav h2 { font-size: 1.2rem; text-align: center; margin-bottom: 30px; }
-
-        nav ul { list-style: none; padding: 0; }
-        nav ul li { margin: 15px 0; }
-        nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 0.9rem; }
-        nav ul li a:hover { color: var(--accent-gold); }
+        .nav-item i { width: 20px; margin-right: 20px; text-align: center; }
 
         /* Main Content */
-        main {
-            margin-left: 290px;
-            padding: 50px;
-            max-width: 900px;
+        .container { max-width: 800px; margin: 0 auto; padding: 100px 20px; }
+
+        section { margin-bottom: 120px; opacity: 0.9; }
+
+        h1 { font-size: 3rem; color: var(--accent-brown); letter-spacing: -1px; }
+        
+        /* Assignment Card Style */
+        .ass-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border-bottom: 4px solid var(--accent-brown);
+            margin-top: 30px;
         }
 
-        section { margin-bottom: 80px; }
-        h1, h2 { border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; }
-
-        .reflection-box {
-            background: #fff9f0;
-            padding: 20px;
-            border-left: 5px solid var(--accent-gold);
-            margin: 20px 0;
+        .reflection {
+            border-left: 2px solid var(--accent-brown);
+            padding-left: 20px;
+            margin: 30px 0;
+            color: var(--text-dim);
             font-style: italic;
         }
 
-        .handout-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .handout-img { width: 100%; border: 1px solid #ddd; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
-
-        .btn {
-            display: inline-block;
+        .attachment-btn {
+            background: transparent;
+            border: 1px solid var(--accent-brown);
+            color: var(--accent-brown);
             padding: 10px 20px;
-            background: var(--accent-blue);
-            color: white;
+            cursor: pointer;
+            transition: 0.3s;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.8rem;
+            display: inline-block;
             margin-top: 10px;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav { width: 100%; height: auto; position: relative; }
-            body { flex-direction: column; }
-            main { margin-left: 0; padding: 20px; }
+        .attachment-btn:hover {
+            background: var(--accent-brown);
+            color: var(--bg-dark);
         }
+
+        /* Abstract Section */
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; }
     </style>
 </head>
 <body>
 
-<nav>
-    <img src="assets/profile.jpg" alt="S.K. Samarasinghe" class="profile-img">
-    <h2>S.K. Samarasinghe</h2>
-    <p style="font-size: 0.8rem; text-align: center;">HS25510551 | Batch 11</p>
-    <ul>
-        <li><a href="#abstract">Abstract</a></li>
-        <li><a href="#objectives">Objectives</a></li>
-        <li><a href="#ass1">1. Gold Biotechnology</a></li>
-        <li><a href="#ass2">2. Viome Project</a></li>
-        <li><a href="#ass3">3. Career Trajectory</a></li>
-        <li><a href="#ass4">4. Bio Pulse Debate</a></li>
-        <li><a href="#conclusions">Conclusions</a></li>
-    </ul>
-</nav>
+<div class="floating-nav">
+    <a href="#home" class="nav-item"><i>🏠</i> <span>Home</span></a>
+    <a href="#ass1" class="nav-item"><i>🥇</i> <span>Gold Biotech</span></a>
+    <a href="#ass2" class="nav-item"><i>🎥</i> <span>Viome Video</span></a>
+    <a href="#ass3" class="nav-item"><i>🚀</i> <span>Career Path</span></a>
+    <a href="#ass4" class="nav-item"><i>🎙️</i> <span>Bio Pulse</span></a>
+</div>
 
-<main>
-    <section id="abstract">
-        <h1>Assessment Portfolio</h1>
-        <h3>SC1153: Introduction to Biotechnology</h3>
-        <p>This portfolio documents my progress through SC1153, spanning a technical analysis of Viome's methodology, the creation of a promotional biotechnology product video, a deep dive into my career trajectory, and a formal debate on bioethics[cite: 250].</p>
-        <h4>Soft Skills Developed:</h4>
-        <ul>
-            <li><strong>Digital Literacy:</strong> Mastering video editing software and professional slide design[cite: 252].</li>
-            <li><strong>Critical Thinking:</strong> Evaluating ethical implications and health-service methodologies[cite: 253].</li>
-            <li><strong>Collaboration:</strong> Coordinating group presentations and video production[cite: 254].</li>
-        </ul>
-    </section>
-
-    <section id="objectives">
-        <h2>Objectives</h2>
-        <ul>
-            <li><strong>Assignment 1:</strong> Explore the intersection of bioinformatics and nanotechnology, focusing on classification and novel innovations.</li>
-            <li><strong>Assignment 2:</strong> Introduce a cutting-edge biotech invention to a general audience via digital media.</li>
-            <li><strong>Assignment 3:</strong> Map out a realistic professional journey inspired by a global role model.</li>
-            <li><strong>Assignment 4:</strong> Facilitate a rigorous ethical debate on the alteration of the human genome.</li>
-        </ul>
+<div class="container">
+    <section id="home" class="hero">
+        <p style="color: var(--accent-brown);">SC1153 | S.K. SAMARASINGHE [cite: 243, 244]</p>
+        <h1>Biotechnology Assessment Portfolio</h1>
+        <p>This portfolio documents my journey through the intersections of computational science, environmental ethics, and personal career growth[cite: 250].</p>
     </section>
 
     <section id="ass1">
-        <h2>Assignment One: Gold Biotechnology</h2>
-        <p><strong>Description:</strong> Focused on Bioinformatics (the "Super-Brain") and Nanobiotechnology (the "Tiny Tech") to educate school children on global problem-solving[cite: 266, 267].</p>
-        <div class="handout-grid">
-            <img src="assets/gold-handout.jpg" alt="Handout" class="handout-img">
+        <h2>01. Gold Biotechnology</h2>
+        <div class="ass-card">
+            <p><strong>Description:</strong> Applications of Bioinformatics and Nanobiotechnology for school-level awareness[cite: 266, 267].</p>
+            <div class="reflection">
+                "The primary challenge was adhering to the 'Do's and Don'ts'—specifically explaining the slides rather than reading them..."
             </div>
-        <div class="reflection-box">
-            "The most challenging part was categorizing complex innovations like 'Super-Brain' data analysis in a way that was interesting for school children while maintaining scientific accuracy..."
+            <a href="assets/gold-handout.pdf" class="attachment-btn">View 6-Slide Handout</a>
+            <a href="assets/feedback1.pdf" class="attachment-btn">Lecturer Feedback</a>
         </div>
-        <a href="#" class="btn">View Marked Document</a>
     </section>
 
-    <section id="conclusions">
-        <h2>Conclusions</h2>
-        <p>Through this module, I have gained a holistic view of biotechnology that extends beyond the lab. I have learned that being a scientist also requires the ability to navigate ethical dilemmas, communicate complex data to the public, and plan for a global career trajectory.</p>
-    </section>
-</main>
+    </div>
 
 </body>
 </html>
