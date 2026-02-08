@@ -5,95 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S.K. Samarasinghe | Portfolio</title>
     <style>
-        :root {
-            --bg-dark: #1a1614;       /* Deep Espresso */
-            --card-bg: #26211e;       /* Dark Walnut */
-            --accent-brown: #a68b7c;  /* Warm Sand */
-            --text-main: #eaddcf;     /* Cream */
-            --text-dim: #b5a499;
-        }
+       :root {
+    --bg-dark: #12100e;       /* Deeper, more modern black-brown */
+    --card-bg: #1e1a17;       /* Richer brown for depth */
+    --accent-gold: #d4a373;   /* Vibrant champagne gold */
+    --text-main: #faedcd;     /* Brighter cream for high readability */
+    --text-dim: #b5a499;
+    --shadow-glow: rgba(212, 163, 115, 0.15);
+}
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Helvetica Neue', sans-serif;
-            margin: 0;
-            scroll-behavior: smooth;
-        }
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
 
-        /* Floating Nav Bar */
-        .floating-nav {
-            position: fixed;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: auto;
-            background: rgba(38, 33, 30, 0.9);
-            border-radius: 30px;
-            overflow: hidden;
-            transition: width 0.3s ease;
-            z-index: 1000;
-            border: 1px solid var(--accent-brown);
-        }
+/* Add a subtle glow to your cards */
+.ass-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(212, 163, 115, 0.1); /* Subtle gold border */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .floating-nav:hover { width: 200px; }
+.ass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-glow); /* Glowing effect on hover */
+    border-color: var(--accent-gold);
+}
 
-        .nav-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            text-decoration: none;
-            color: var(--text-main);
-            white-space: nowrap;
-        }
+/* Style for the floating nav icons */
+.nav-item i {
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 5px var(--shadow-glow));
+}
 
-        .nav-item i { width: 20px; margin-right: 20px; text-align: center; }
-
-        /* Main Content */
-        .container { max-width: 800px; margin: 0 auto; padding: 100px 20px; }
-
-        section { margin-bottom: 120px; opacity: 0.9; }
-
-        h1 { font-size: 3rem; color: var(--accent-brown); letter-spacing: -1px; }
-        
-        /* Assignment Card Style */
-        .ass-card {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border-bottom: 4px solid var(--accent-brown);
-            margin-top: 30px;
-        }
-
-        .reflection {
-            border-left: 2px solid var(--accent-brown);
-            padding-left: 20px;
-            margin: 30px 0;
-            color: var(--text-dim);
-            font-style: italic;
-        }
-
-        .attachment-btn {
-            background: transparent;
-            border: 1px solid var(--accent-brown);
-            color: var(--accent-brown);
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .attachment-btn:hover {
-            background: var(--accent-brown);
-            color: var(--bg-dark);
-        }
-
-        /* Abstract Section */
-        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; }
-    </style>
+/* Glassmorphism effect for the floating nav */
+.floating-nav {
+    background: rgba(30, 26, 23, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--accent-gold) !important;
+}
 </head>
 <body>
 
@@ -108,7 +60,7 @@
 <div class="container">
    <section id="home" class="hero">
     <div style="display: flex; align-items: center; gap: 30px;">
-        <img src="portfolio image.jpeg" alt="S.K. Samarasinghe" 
+        <img src="Portfolio Image.jpeg" alt="S.K. Samarasinghe" 
              style="width: 180px; height: 180px; border-radius: 50%; border: 3px solid var(--accent-brown); object-fit: cover;">
         
         <div>
@@ -176,7 +128,7 @@
 
         <h4 style="margin-top: 40px;">Session Evidence</h4>
         <div style="text-align: center;">
-            <img src="group.jpeg" alt="Group Presentation" 
+            <img src="Group.jpeg" alt="Group Presentation" 
                  style="width: 100%; max-width: 600px; border: 1px solid var(--accent-brown); border-radius: 8px; opacity: 0.8;">
             <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 10px;">Figure 1: Group 03 during the Gold Biotechnology session.</p>
         </div>
