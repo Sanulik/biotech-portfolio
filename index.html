@@ -6,11 +6,11 @@
     <title>S.K. Samarasinghe | Portfolio</title>
     <style>
         :root {
-            --bg-dark: #12100e;       /* Deep Obsidian Coffee */
-            --card-bg: #1e1a17;       /* Dark Cocoa */
-            --accent-gold: #d4a373;   /* Champagne Gold */
-            --accent-brown: #8b5e3c;  /* Warm Earth Brown */
-            --text-main: #faedcd;     /* Cream */
+            --bg-dark: #12100e;
+            --card-bg: #1e1a17;
+            --accent-gold: #d4a373;
+            --accent-brown: #8b5e3c;
+            --text-main: #faedcd;
             --text-dim: #b5a499;
             --shadow-glow: rgba(212, 163, 115, 0.15);
         }
@@ -30,7 +30,7 @@
             padding: 40px 20px;
         }
 
-        /* Floating Nav Bar - Expandable on Hover */
+        /* Floating Nav Bar */
         .floating-nav {
             position: fixed;
             left: 20px;
@@ -94,7 +94,6 @@
         }
 
         section { margin-bottom: 100px; }
-
         h2 { color: var(--accent-gold); border-bottom: 1px solid var(--accent-gold); padding-bottom: 10px; }
 
         .reflection {
@@ -119,13 +118,8 @@
             margin: 10px 0;
         }
 
-        .attachment-btn:hover {
-            background: var(--accent-gold);
-            color: var(--bg-dark);
-        }
-
+        .attachment-btn:hover { background: var(--accent-gold); color: var(--bg-dark); }
         img { max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 5px; }
-        
         .handout-img { margin-bottom: 20px; border: 1px solid #444; }
     </style>
 </head>
@@ -156,92 +150,48 @@
         </div>
     </section>
 
-    <section id="abstract">
-        <h2>Abstract</h2>
+    <section id="ass3">
+        <h2>03. Personal Career Mapping</h2>
         <div class="ass-card">
-            <p>This portfolio documents a comprehensive progression through SC1153, showcasing a strategic blend of technical analysis and professional communication within the biotechnology sector. Collectively, this portfolio demonstrates a multidisciplinary readiness to translate complex scientific data into impactful, professional assets.</p>
-        </div>
-    </section>
+            <p><strong>Assignment Description</strong></p>
+            <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 1.6;">
+                <li><strong>Topic:</strong> Personal Career Mapping and Professional Role Model Analysis.</li>
+                <li><strong>Format:</strong> Individual presentation and written analysis.</li>
+                <li><strong>Key Content:</strong> This assignment required a self-reflective analysis of my future professional journey within the biotechnology industry. It involved identifying a prominent figure in the field who inspires my career goals and drafting a structured path—from my current undergraduate studies to high-level strategic leadership in biotechnology.</li>
+            </ul>
 
-    <section id="acknowledgements">
-        <h2>Acknowledgements</h2>
-        <div class="ass-card">
-            <p>I would like to thank my lecturers at the Sri Lanka Institute of Information Technology for their guidance. I am also grateful to my group mates—Krish, Sanuli, Anusara, and Bihara—for their commitment, and to my parents for their support during this semester.</p>
-        </div>
-    </section>
+            <button class="attachment-btn" onclick="toggleHandouts('handout3')">View Presentation Handouts ↓</button>
 
-    <section id="objectives">
-        <h2>Assignment Objectives</h2>
-        <div class="ass-card">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div>
-                    <h4 style="color: var(--accent-gold);">01. Gold Biotechnology</h4>
-                    <p style="font-size: 0.9rem;">To investigate Bioinformatics and Nanotechnology applications in global challenges.</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--accent-gold);">02. Viome Product Video</h4>
-                    <p style="font-size: 0.9rem;">To interpret metatranscriptomics and communicate its value via digital media.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="ass1">
-        <h2>01. Gold Biotechnology</h2>
-        <div class="ass-card">
-            <p><strong>Description:</strong> Exploration of the intersection between Bioinformatics and Nanotechnology for educational outreach.</p>
-            
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <button class="attachment-btn" onclick="toggleHandouts('handout1')">View Handouts ↓</button>
-                <a href="assets/Gold biotechnology.pdf" download class="attachment-btn">Download Full PDF 📥</a>
-            </div>
-
-            <div id="handout1" style="display: none; margin-top: 25px;">
-                <img src="1-1.png" alt="Handout 1" class="handout-img">
-                <img src="1-2.png" alt="Handout 2" class="handout-img">
-                <img src="1-3.png" alt="Handout 3" class="handout-img">
-            </div>
-
-            <h4 style="margin-top: 40px; color: var(--accent-gold);">Session Evidence</h4>
-            <img src="Group.jpeg" alt="Group Presentation" style="width: 100%; max-width: 600px; border: 1px solid var(--accent-gold); margin: 20px auto;">
-
-            <div class="reflection">
-                <p><strong>Reflection:</strong> I explained the "Code to Cure" workflow using "Super-Brain" and "Tiny Tech" analogies. The challenge was maintaining eye contact and eye-level engagement without reading notes.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="ass2">
-        <h2>02. Viome Health Intelligence Video</h2>
-        <div class="ass-card">
-            <p><strong>Project Title:</strong> Viome Biotechnology Product Journey & Analysis</p>
-            
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <button class="attachment-btn" onclick="toggleHandouts('handout2')">View Handouts ↓</button>
-                <a href="assets/Viome Product Journey.pdf" download class="attachment-btn">Download Full PDF 📥</a>
-            </div>
-
-            <div id="handout2" style="display: none; margin-top: 25px;">
-                <img src="2-1.png" alt="Viome Handout 1" class="handout-img">
-                <img src="2-2.png" alt="Viome Handout 2" class="handout-img">
-                <img src="2-3.png" alt="Viome Handout 3" class="handout-img">
+            <div id="handout3" style="display: none; margin-top: 25px;">
+                <img src="3-1.png" alt="Handout 3-1" class="handout-img">
+                <img src="3-2.png" alt="Handout 3-2" class="handout-img">
+                <img src="3-3.png" alt="Handout 3-3" class="handout-img">
             </div>
 
             <div style="margin-top: 30px;">
-                <h4 style="color: var(--accent-gold);">Written Summary</h4>
-                <p>Viome utilizes advanced metatranscriptomic sequencing to analyze active gene expression in the gut microbiome. Unlike DNA tests, it focuses on RNA to see what is currently happening in the body.</p>
-                
+                <h4 style="color: var(--accent-gold);">Role Model: Dr. Jennifer Doudna</h4>
+                <p><strong>Contribution:</strong> Nobel laureate and co-inventor of CRISPR-Cas9 gene-editing technology.</p>
+                <p><strong>Inspiration:</strong> I chose Dr. Doudna not only for her technical brilliance in genomics but for her commitment to the ethical implications of her work. Her ability to lead both in the lab and in global scientific policy is the standard I aim to achieve.</p>
             </div>
 
-            <h4 style="margin-top: 40px; color: var(--accent-gold);">Session Evidence (Q&A)</h4>
+            <h4 style="margin-top: 40px; color: var(--accent-gold);">Session Evidence</h4>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <img src="self.jpeg" alt="Q&A 1" style="border: 1px solid var(--accent-gold);">
-                <img src="self 2.jpeg" alt="Q&A 2" style="border: 1px solid var(--accent-gold);">
+                <div style="text-align: center;">
+                    <img src="self 3.jpeg" alt="Self 3" style="border: 1px solid var(--accent-gold);">
+                    <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 5px;">Figure 3.1: Individual Presentation Phase</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="self 4.jpeg" alt="Self 4" style="border: 1px solid var(--accent-gold);">
+                    <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 5px;">Figure 3.2: Critical Career Evaluation</p>
+                </div>
             </div>
 
             <div class="reflection">
-                <p><strong>Reflection:</strong> I spearheaded the visual communication strategy, focusing on translating "Global Intelligence" concepts into a seamless technical narrative. By balancing scientific evidence with design, I ensured transparency and accessibility for non-experts.</p>
+                <p><strong>Career Vision & Professional Mapping:</strong></p>
+                <p>Through a strategic benchmarking of Dr. Jennifer Doudna’s career trajectory, I synthesized my academic foundations with a long-term professional roadmap centered on the intersection of environmental R&D and public policy. This process of critical self-evaluation moved me beyond the laboratory, identifying a distinct calling to bridge the gap between scientific innovation and societal impact. By aligning my current technical competencies with the leadership qualities required for global policy-making, I have established a clear "North Star" for my development. This roadmap now serves as a strategic filter for my elective choices and professional engagements, ensuring that my future in biotechnology is not just one of research, but one of systemic influence and sustainable community engagement.</p>
             </div>
+            
+            <a href="assets/Assignment3_Marked.pdf" class="attachment-btn">View Marked Document</a>
         </div>
     </section>
 </div>
